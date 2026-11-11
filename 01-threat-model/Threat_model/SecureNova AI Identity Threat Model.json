@@ -1,0 +1,2324 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "",
+  "summary": {
+    "title": "SecureNova AI Identity Threat Model",
+    "owner": "Kali Charan Gara",
+    "description": "SecureNova’s customer service platform uses an LLM agent that signs users in through Auth0. The agent calls internal REST APIs, pulls answers from a RAG knowledge base, and uses MCP server tools to take actions for the user. This model covers the identities involved and the threats against them.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "SecureNova AI Identity Data Flow",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [
+          {
+            "position": {
+              "x": 26.25,
+              "y": 29.000000000001563
+            },
+            "size": {
+              "width": 400,
+              "height": 370
+            },
+            "attrs": {
+              "label": {
+                "text": "                         User layer"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "1775d909-b877-4867-9973-907b7a7ec7c2",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "                         User layer",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "d5720ea2-df50-494d-b957-b71c7e95de83",
+                "065a460a-e085-430c-98d6-2a70fad5147d",
+                "4d4a35b0-f1dd-48b8-a19c-103e851bef87"
+              ],
+              "containedElements": [
+                "c6f3a771-6e88-489c-a73e-77a85fa30d9a",
+                "4c88639d-d457-4159-b00f-7b6f321bb645"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 967,
+              "y": 39.00000000000156
+            },
+            "size": {
+              "width": 380,
+              "height": 350
+            },
+            "attrs": {
+              "label": {
+                "text": "                    Internal API layer"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "89b3cc06-24b3-4ba7-91d3-7d5da8116519",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "                    Internal API layer",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "8182ec06-9775-4984-892c-7c3df11f8a7d"
+              ],
+              "containedElements": [
+                "28b06812-b4f1-42fc-8224-7347182540c7",
+                "d59e3c3f-dd71-4823-9106-69b739f12c5a"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 519.9999999999997,
+              "y": 36.00000000000023
+            },
+            "size": {
+              "width": 380,
+              "height": 670
+            },
+            "attrs": {
+              "label": {
+                "text": "                      Agent layer"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "65169030-7467-45d0-990a-cb28979d62be",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "                      Agent layer",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "d5720ea2-df50-494d-b957-b71c7e95de83",
+                "8182ec06-9775-4984-892c-7c3df11f8a7d",
+                "ede0cacb-f7f9-43f3-ab12-447e643b6178",
+                "065a460a-e085-430c-98d6-2a70fad5147d",
+                "dc3e6679-59a3-441c-b579-ce3497cee489",
+                "e8ed087c-9c49-4a09-910e-0ab41696fd02"
+              ],
+              "containedElements": [
+                "791e525f-a503-45ef-9ff5-d3c158d018ee",
+                "00aafd19-7f4d-4951-850e-9ca5fb742a56",
+                "414332d4-7a04-4058-b50e-d87241e221f6",
+                "32b6f54c-b512-4b88-9205-c84fd50cccdc"
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 50,
+              "y": 184.00000000000156
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "46457831-5276-411d-bee0-472faa7d8cc2"
+                },
+                {
+                  "group": "right",
+                  "id": "9bae1e5c-e8f6-4a25-94f8-4ff572772c78"
+                },
+                {
+                  "group": "bottom",
+                  "id": "5eebb3ab-52e3-4d1a-99c7-8bfc7b4dd339"
+                },
+                {
+                  "group": "left",
+                  "id": "af6cdcc5-f616-494f-88a3-055fea7826b0"
+                }
+              ]
+            },
+            "id": "c6f3a771-6e88-489c-a73e-77a85fa30d9a",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Customer",
+              "description": "Human user who logs in through Auth0",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "a9c60342-660f-4227-b963-1229b5db41af",
+                  "title": "Customer – Identity Spoofing and Unauthorized Login",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may impersonate a legitimate customer using stolen credentials, phishing, or session hijacking to gain unauthorized access to the AI Agent system. This could allow the attacker to submit malicious requests, access customer-specific information, or perform unauthorized operations.",
+                  "mitigation": "Implement multi-factor authentication (MFA), enforce strong password policies, use secure session management, validate access tokens, implement account lockout and rate limiting, and monitor login attempts for suspicious activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8"
+                },
+                {
+                  "id": "eccc1de6-dcfc-45c8-84dc-1efa2acb6580",
+                  "title": "Customer – Repudiation of User Actions",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "A customer may deny performing specific actions or submitting requests to the AI Agent system. Without reliable audit records, it may be difficult to verify user activities, trace unauthorized transactions, or establish accountability for actions performed through the system.",
+                  "mitigation": "Maintain tamper-resistant audit logs of customer authentication events, requests, tool invocations, and transactions. Include timestamps, user identifiers, session details, and request IDs. Implement centralized log monitoring, secure log storage, and audit trail integrity verification.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 339,
+              "y": 184.00000000000156
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Auth0"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "3de39ff8-193e-474c-97ba-f170a31dd280"
+                },
+                {
+                  "group": "right",
+                  "id": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+                },
+                {
+                  "group": "left",
+                  "id": "3d409463-fa1f-459e-ae27-38b42e53646e"
+                }
+              ]
+            },
+            "id": "4c88639d-d457-4159-b00f-7b6f321bb645",
+            "data": {
+              "type": "tm.Process",
+              "name": "Auth0",
+              "description": "Handles login and issues tokens.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "98d2bd48-7ea5-426c-8eda-d207dc0f3465",
+                  "title": "Stolen or forged token accepted by the APIs",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Auth0 decides who is allowed in. If an attacker steals an access token, or the APIs don’t check a token’s signature, audience and expiry, they can act as a real user or as the agent.",
+                  "mitigation": "Use short-lived tokens, check the signature, issuer, audience and expiry on every call, turn on MFA and brute-force protection, and rotate refresh tokens.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Access Token",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ff64a267-fb6c-4d9c-8307-180aaf10883b",
+                  "title": "Access Token Tampering – JWT Claim Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may modify or forge access token contents, including JWT claims, user roles, or permission scopes, to gain unauthorized privileges or access restricted AI Agent functionalities.",
+                  "mitigation": "Validate JWT signatures using Auth0 JWKS, verify issuer and audience claims, enforce token expiration and scope validation, reject unsigned or improperly signed tokens, restrict accepted signing algorithms, and perform server-side authorization checks before processing requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [
+                "1775d909-b877-4867-9973-907b7a7ec7c2",
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Access Token"
+            ],
+            "id": "d5720ea2-df50-494d-b957-b71c7e95de83",
+            "source": {
+              "cell": "4c88639d-d457-4159-b00f-7b6f321bb645",
+              "port": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+            },
+            "target": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "3d409463-fa1f-459e-ae27-38b42e53646e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API call\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "1e240390-6e26-4e09-9f18-60a905c3ed84",
+                  "title": "MCP Server – Sensitive Data Exposure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "The MCP Server may expose sensitive information, including confidential data, API responses, credentials, or retrieved documents, to unauthorized users or AI Agents due to insufficient access controls or improper data handling.",
+                  "mitigation": "Implement strict authentication and authorization for MCP Server resources, enforce role-based access control (RBAC), restrict access to sensitive data, redact credentials and confidential information from tool responses, validate data access permissions, and maintain audit logs of all data requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "7"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "API call\n"
+            ],
+            "id": "52cd8701-1b97-48c3-aa3f-b00beffc16fb",
+            "source": {
+              "cell": "28b06812-b4f1-42fc-8224-7347182540c7",
+              "port": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+            },
+            "target": {
+              "cell": "d59e3c3f-dd71-4823-9106-69b739f12c5a",
+              "port": "3d409463-fa1f-459e-ae27-38b42e53646e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2b9a78d0-0e25-47a1-bd0a-a1a2be0ce21f",
+                  "title": "Login Request Tampering – Credential Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may intercept or manipulate the login request transmitted between the customer and Auth0 to alter authentication parameters or inject malicious data, potentially compromising the authentication process.",
+                  "mitigation": "Enforce HTTPS/TLS, validate all authentication parameters, implement OAuth 2.0 Authorization Code Flow with PKCE, and use secure server-side validation to prevent unauthorized modification of login requests.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "8"
+                },
+                {
+                  "id": "f5661527-1bd4-4a18-8fa1-7b01486af45f",
+                  "title": "Login Request – Credential Exposure in Transit",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker may intercept the login request transmitted between the customer and Auth0 to capture sensitive information such as usernames, passwords, or authentication tokens, potentially leading to unauthorized account access.",
+                  "mitigation": "Enforce HTTPS/TLS encryption, implement secure cookie attributes, avoid transmitting credentials in URLs or logs, use secure token handling, and enable appropriate monitoring to detect suspicious access attempts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "7"
+                },
+                {
+                  "id": "1f18e919-fbe5-460c-8211-02f17a077921",
+                  "title": "Login Request Flooding – Authentication Service Disruption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker may flood the authentication endpoint with a large volume of repeated login requests, overwhelming the authentication service and preventing legitimate customers from logging in. This may result in service disruption and reduced availability of the authentication system.",
+                  "mitigation": "Implement rate limiting on authentication endpoints, enable Auth0 Brute-Force Protection and Suspicious IP Throttling, deploy CAPTCHA for suspicious login attempts, configure Web Application Firewall (WAF) rules, and use exponential backoff to prevent automated request flooding.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "Login Request"
+            ],
+            "id": "ab9d1939-e16d-4dd9-bf43-c23c0126854c",
+            "source": {
+              "cell": "c6f3a771-6e88-489c-a73e-77a85fa30d9a",
+              "port": "9bae1e5c-e8f6-4a25-94f8-4ff572772c78"
+            },
+            "target": {
+              "cell": "4c88639d-d457-4159-b00f-7b6f321bb645",
+              "port": "3d409463-fa1f-459e-ae27-38b42e53646e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tool call",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "12f28128-274e-4b01-b14c-6a495b1eeacc",
+                  "title": "MCP Tool Call Tampering – Unauthorized Parameter Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may manipulate tool-call parameters or inject malicious instructions into AI Agent requests, causing the MCP Server to execute unauthorized operations, modify data, or access unintended resources.",
+                  "mitigation": "Validate and sanitize all tool-call parameters on the MCP Server, enforce strict input schemas, implement role-based access control (RBAC), allowlist approved tools and operations, apply least-privilege permissions, and maintain audit logs of all tool executions.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [
+                "89b3cc06-24b3-4ba7-91d3-7d5da8116519",
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Tool call"
+            ],
+            "id": "8182ec06-9775-4984-892c-7c3df11f8a7d",
+            "source": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+            },
+            "target": {
+              "cell": "28b06812-b4f1-42fc-8224-7347182540c7",
+              "port": "3d409463-fa1f-459e-ae27-38b42e53646e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Retrieval Query.\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ]
+            },
+            "labels": [
+              "Retrieval Query.\n"
+            ],
+            "id": "ede0cacb-f7f9-43f3-ab12-447e643b6178",
+            "source": {
+              "x": 710,
+              "y": 430
+            },
+            "target": {
+              "cell": "00aafd19-7f4d-4951-850e-9ca5fb742a56",
+              "port": "1eb32d34-546c-4d92-9a3b-8b9d2cd25ca4"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Chat response",
+              "description": "Agent's final answer returned to the customer.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "1775d909-b877-4867-9973-907b7a7ec7c2",
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ]
+            },
+            "labels": [
+              "Chat response"
+            ],
+            "id": "065a460a-e085-430c-98d6-2a70fad5147d",
+            "source": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "3de39ff8-193e-474c-97ba-f170a31dd280"
+            },
+            "target": {
+              "cell": "c6f3a771-6e88-489c-a73e-77a85fa30d9a",
+              "port": "46457831-5276-411d-bee0-472faa7d8cc2"
+            },
+            "vertices": [
+              {
+                "x": 440,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Key retrieval",
+              "description": "Agent reads the LLM API key from the vault.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Key retrieval"
+            ],
+            "id": "1cd9d714-b5ad-4e05-8abb-dcd4af2ecfb9",
+            "source": {
+              "cell": "32b6f54c-b512-4b88-9205-c84fd50cccdc",
+              "port": "6b755be4-caee-41e0-b462-6a6c292689ed"
+            },
+            "target": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "3de39ff8-193e-474c-97ba-f170a31dd280"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Token request",
+              "description": "Client ID and secret sent to Auth0 (client credentials flow).",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "1775d909-b877-4867-9973-907b7a7ec7c2"
+              ]
+            },
+            "labels": [
+              "Token request"
+            ],
+            "id": "4d4a35b0-f1dd-48b8-a19c-103e851bef87",
+            "source": {
+              "cell": "283f1227-2e68-44d6-8d9d-91987f88d6c5",
+              "port": "b5cea4d9-d5e2-468b-b28f-1af6d52187f5"
+            },
+            "target": {
+              "cell": "4c88639d-d457-4159-b00f-7b6f321bb645",
+              "port": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Machine token",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ]
+            },
+            "labels": [
+              "Machine token"
+            ],
+            "id": "dc3e6679-59a3-441c-b579-ce3497cee489",
+            "source": {
+              "cell": "283f1227-2e68-44d6-8d9d-91987f88d6c5",
+              "port": "6fedc36e-00b8-4cce-9bfa-5a74aba8c77c"
+            },
+            "target": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+            },
+            "vertices": [
+              {
+                "x": 561,
+                "y": 280
+              },
+              {
+                "x": 600,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 680,
+              "y": 180
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "AI Agent"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "3de39ff8-193e-474c-97ba-f170a31dd280"
+                },
+                {
+                  "group": "right",
+                  "id": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+                },
+                {
+                  "group": "left",
+                  "id": "3d409463-fa1f-459e-ae27-38b42e53646e"
+                }
+              ]
+            },
+            "id": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+            "data": {
+              "type": "tm.Process",
+              "name": "AI Agent",
+              "description": "LLM agent that acts on behalf of the user.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "eaab5846-91b0-463b-b158-17f84d88fc1d",
+                  "title": "AI Agent – Prompt Injection and Instruction Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may manipulate the AI Agent through malicious user inputs or crafted instructions, causing it to ignore system-level instructions, generate unintended responses, or execute unauthorized actions through connected tools and services.",
+                  "mitigation": "Implement robust input validation and prompt injection detection, separate trusted system instructions from untrusted user inputs, enforce strict tool-call authorization, apply least-privilege access controls, validate AI-generated actions before execution, and monitor agent activities through audit logging.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "8"
+                },
+                {
+                  "id": "59c4bdbf-2b21-44ef-bc3b-ced64d69e02c",
+                  "title": "AI Agent – Sensitive Information Leakage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "The AI Agent may unintentionally disclose sensitive information, including system prompts, confidential business data, user information, or retrieved knowledge, through its responses. An attacker may exploit prompt injection or improper access controls to extract information that should not be exposed.",
+                  "mitigation": "Implement sensitive data filtering and output validation, restrict access to confidential information based on user roles, protect system prompts, enforce data loss prevention controls, sanitize retrieved content, and maintain audit logs to monitor and detect unauthorized information disclosure.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "8"
+                },
+                {
+                  "id": "80f0df14-219e-41bf-a63b-7938d3669873",
+                  "title": "AI Agent – Unauthorized Privilege Escalation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "An attacker may exploit excessive permissions or weaknesses in the AI Agent's authorization mechanisms to gain elevated privileges, access restricted resources, or execute administrative operations through connected MCP tools and services.",
+                  "mitigation": "Apply least-privilege access controls, enforce role-based authorization for all agent operations, restrict access to sensitive tools and resources, validate permissions before executing tool calls, implement privilege separation, and continuously monitor agent activities for unauthorized privilege escalation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 650,
+              "y": 580
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "RAG Knowledge"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 12,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1eb32d34-546c-4d92-9a3b-8b9d2cd25ca4"
+                },
+                {
+                  "group": "right",
+                  "id": "58b86223-c287-4e56-83dc-6a7c81a99ecd"
+                },
+                {
+                  "group": "bottom",
+                  "id": "523245ba-0faa-4a9f-956e-4c5573520ce6"
+                },
+                {
+                  "group": "left",
+                  "id": "12d2eaba-39bf-4410-ad41-0503a86e1720"
+                }
+              ]
+            },
+            "id": "00aafd19-7f4d-4951-850e-9ca5fb742a56",
+            "data": {
+              "type": "tm.Store",
+              "name": "RAG Knowledge",
+              "description": "Help articles and policies the agent searches",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "b1d66414-0a53-4d54-a884-082997ff025e",
+                  "title": "RAG Knowledge – Sensitive Data Exposure and Unauthorized Retrieval",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker may exploit insufficient access controls in the RAG Knowledge store to retrieve sensitive documents, confidential information, or data belonging to other users through unauthorized knowledge queries, potentially exposing proprietary information.",
+                  "mitigation": "Implement role-based access control for the RAG Knowledge store, enforce document-level permissions, filter retrieved content based on user authorization, encrypt stored embeddings and documents, sanitize and validate knowledge queries, and maintain audit logs of retrieval activities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "8"
+                },
+                {
+                  "id": "69ecd59d-aada-4d0a-97dc-cf8eda162510",
+                  "title": "RAG Knowledge – Knowledge Base Poisoning and Data Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may inject, modify, or corrupt documents and embeddings stored in the RAG Knowledge base, causing the AI Agent to retrieve manipulated or misleading information and generate incorrect or malicious responses.",
+                  "mitigation": "Restrict write access to the RAG Knowledge base, implement role-based access controls, validate and sanitize uploaded documents, verify document integrity using cryptographic hashes, maintain version control and backups, and regularly audit knowledge base updates to detect unauthorized modifications.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "children": [
+              "00813017-8db3-4275-a1ee-8d05b5584c7c"
+            ]
+          },
+          {
+            "position": {
+              "x": 985,
+              "y": 174.00000000000156
+            },
+            "size": {
+              "width": 90,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "MCP Server"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 14,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "3de39ff8-193e-474c-97ba-f170a31dd280"
+                },
+                {
+                  "group": "right",
+                  "id": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+                },
+                {
+                  "group": "left",
+                  "id": "3d409463-fa1f-459e-ae27-38b42e53646e"
+                }
+              ]
+            },
+            "id": "28b06812-b4f1-42fc-8224-7347182540c7",
+            "data": {
+              "type": "tm.Process",
+              "name": "MCP Server",
+              "description": "Tool server the agent calls to take actions",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "21e4bc1b-81e0-4cb9-9e83-85b9405ad1b6",
+                  "title": "Poisoned tool call triggers a privileged action",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "The MCP server can take real actions such as issuing refunds. If the agent is tricked by a malicious instruction, it may call a tool the user should never be able to use, and the MCP server runs it without checking who is really asking.",
+                  "mitigation": "Check the caller’s scope on every tool call, give each tool the least privilege it needs, require approval for high-risk actions like refunds, and log every call.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1212,
+              "y": 174.00000000000156
+            },
+            "size": {
+              "width": 90,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "REST API"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 15,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "3de39ff8-193e-474c-97ba-f170a31dd280"
+                },
+                {
+                  "group": "right",
+                  "id": "59c3ca4b-1d90-4a5c-9744-5055a08b7a16"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+                },
+                {
+                  "group": "left",
+                  "id": "3d409463-fa1f-459e-ae27-38b42e53646e"
+                }
+              ]
+            },
+            "id": "d59e3c3f-dd71-4823-9106-69b739f12c5a",
+            "data": {
+              "type": "tm.Process",
+              "name": "REST API",
+              "description": "Internal API that holds orders, refunds and customer records",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "e572514b-a349-4eef-9bc9-69f74388a524",
+                  "title": "REST API – Broken Access Control and Unauthorized Data Access",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker may exploit weak authentication or improper authorization in the REST API to access sensitive data, retrieve unauthorized resources, or perform operations on behalf of other users, potentially compromising data confidentiality and integrity.",
+                  "mitigation": "Enforce authentication and role-based authorization for all API endpoints, validate user permissions for every request, implement object-level access controls, apply rate limiting, validate input parameters, use HTTPS/TLS, and maintain API access logs with continuous monitoring.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 493.4999999999952,
+              "y": -91
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "LLM Provider"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 16,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "46457831-5276-411d-bee0-472faa7d8cc2"
+                },
+                {
+                  "group": "right",
+                  "id": "9bae1e5c-e8f6-4a25-94f8-4ff572772c78"
+                },
+                {
+                  "group": "bottom",
+                  "id": "5eebb3ab-52e3-4d1a-99c7-8bfc7b4dd339"
+                },
+                {
+                  "group": "left",
+                  "id": "af6cdcc5-f616-494f-88a3-055fea7826b0"
+                }
+              ]
+            },
+            "id": "d3ac7cd7-b100-4ef3-9a69-0f5bfe6e4746",
+            "data": {
+              "type": "tm.Actor",
+              "name": "LLM Provider",
+              "description": "External LLM service, called with the LLM API key.",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "5cdc2c89-e80d-458e-b3d5-f01efd50329d",
+                  "title": "LLM Provider – Sensitive Prompt and Data Exposure",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "The LLM Provider may lack sufficient audit logs and request traceability, making it difficult to identify who initiated specific requests, verify model responses, or investigate disputed AI interactions.",
+                  "mitigation": "Enable comprehensive audit logging, maintain unique request IDs, record timestamps and user identifiers, securely retain request and response metadata, synchronize system clocks, and implement log integrity protection to support incident investigation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "6"
+                },
+                {
+                  "id": "9f276cef-8c32-4385-8992-d16593a30950",
+                  "title": "LLM Provider – Spoofing and Malicious Provider Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may impersonate a legitimate LLM provider or manipulate the provider endpoint, causing the AI Agent to communicate with an unauthorized or malicious service. This could result in malicious responses, sensitive data exposure, or execution of attacker-controlled instructions.",
+                  "mitigation": "Use authenticated and trusted LLM provider endpoints, enforce TLS certificate validation, verify provider identities, securely manage API keys, implement endpoint allowlisting, and monitor LLM requests and responses for suspicious activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 665,
+              "y": 329.0000000000016
+            },
+            "size": {
+              "width": 90,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "RAG Pipeline"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 17,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "ef8b4889-fb72-4455-983a-ae627c2e0519"
+                },
+                {
+                  "group": "right",
+                  "id": "6d16dfc5-e7d5-49c5-b653-93e09a04c480"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a6450ebb-3e8c-4927-a85a-2b17cb78b082"
+                },
+                {
+                  "group": "left",
+                  "id": "704e622c-7a33-4629-b6b2-a5cdfa2ff08d"
+                }
+              ]
+            },
+            "id": "414332d4-7a04-4058-b50e-d87241e221f6",
+            "data": {
+              "type": "tm.Process",
+              "name": "RAG Pipeline",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "465d226d-e49e-459b-8b1c-b449903d5b8a",
+                  "title": "Poisoned document returned to the agent",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "If an attacker adds or edits a document in the knowledge base, the pipeline will return it as a normal answer. The agent trusts what it gets back, so a hidden instruction inside the text can change how the agent behaves.",
+                  "mitigation": "Limit who can write to the knowledge base, check and sign documents when they are added, scan retrieved text for instructions, and treat retrieved content as data, not commands.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 18,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Knowledge query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "8dfe574a-f547-4df2-ac15-8187849a4eea",
+                  "title": "Knowledge Query – Retrieval Manipulation and Prompt Injection",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may manipulate knowledge queries or inject malicious instructions into retrieved content, causing the AI Agent to retrieve altered or misleading information from the RAG Knowledge store, potentially resulting in incorrect responses or unauthorized actions.",
+                  "mitigation": "Validate and sanitize all knowledge queries, implement access controls on retrieved documents, verify the integrity and authenticity of stored knowledge, isolate retrieved content from trusted system instructions, detect malicious prompt injection attempts, and maintain audit logs of retrieval activities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Knowledge query"
+            ],
+            "id": "7b684e06-dc0a-4ea5-a69d-5f131e7b6ecf",
+            "source": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "c59f5457-4dec-4434-aaab-fdc16e993f34"
+            },
+            "target": {
+              "cell": "414332d4-7a04-4058-b50e-d87241e221f6",
+              "port": "ef8b4889-fb72-4455-983a-ae627c2e0519"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 515.9999999999952,
+              "y": 339.0000000000016
+            },
+            "size": {
+              "width": 90,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "M2M Client"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6fedc36e-00b8-4cce-9bfa-5a74aba8c77c"
+                },
+                {
+                  "group": "right",
+                  "id": "cadcfb06-a146-48b2-8b18-6d6d73cd1baa"
+                },
+                {
+                  "group": "bottom",
+                  "id": "ea726612-b812-49f7-8b06-35524ec75605"
+                },
+                {
+                  "group": "left",
+                  "id": "b5cea4d9-d5e2-468b-b28f-1af6d52187f5"
+                }
+              ]
+            },
+            "id": "283f1227-2e68-44d6-8d9d-91987f88d6c5",
+            "zIndex": 19,
+            "data": {
+              "type": "tm.Process",
+              "name": "M2M Client",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "30918e55-920c-414a-8047-6f16f31795cc",
+                  "title": "M2M client secret stolen",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "The client ID and secret work like a password for a machine. If they leak from a config file or a log, an attacker can ask Auth0 for tokens and act as the M2M client.",
+                  "mitigation": "Store the secret in a secrets manager, keep token lifetime short (60 seconds), rotate the secret regularly, and give the client only the scopes it needs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 20,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "LLM request",
+              "description": "Sent with the LLM API key.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "5cf9e8ec-6db0-407b-96b9-e9393f197cdd",
+                  "title": "LLM Request – Sensitive Prompt and Data Exposure in Transit",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Sensitive information, including user inputs, confidential business data, system prompts, and retrieved context, may be exposed while transmitted from the AI Agent to the external LLM Provider. An attacker intercepting the communication may gain unauthorized access to this information.",
+                  "mitigation": "Enforce HTTPS/TLS 1.2 or higher for all communications with the LLM Provider, validate SSL certificates, avoid transmitting unnecessary sensitive information, implement data masking and encryption, securely manage API credentials, and monitor communication logs for suspicious activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [
+                "65169030-7467-45d0-990a-cb28979d62be"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "LLM request"
+            ],
+            "id": "e8ed087c-9c49-4a09-910e-0ab41696fd02",
+            "source": {
+              "cell": "791e525f-a503-45ef-9ff5-d3c158d018ee",
+              "port": "3de39ff8-193e-474c-97ba-f170a31dd280"
+            },
+            "target": {
+              "cell": "d3ac7cd7-b100-4ef3-9a69-0f5bfe6e4746",
+              "port": "5eebb3ab-52e3-4d1a-99c7-8bfc7b4dd339"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 740,
+              "y": 56
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "LLM API Key Vault"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6dc0b17d-50a2-49f6-84c0-0c93b300c7f1"
+                },
+                {
+                  "group": "right",
+                  "id": "94ff7a63-fd9b-46e6-bb1f-512f7c33af2c"
+                },
+                {
+                  "group": "bottom",
+                  "id": "6b755be4-caee-41e0-b462-6a6c292689ed"
+                },
+                {
+                  "group": "left",
+                  "id": "af745f41-57f3-444b-86b1-490204fd5a50"
+                }
+              ]
+            },
+            "id": "32b6f54c-b512-4b88-9205-c84fd50cccdc",
+            "zIndex": 21,
+            "data": {
+              "type": "tm.Store",
+              "name": "LLM API Key Vault",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "d62832b5-5376-431e-a7c2-d42c91766a37",
+                  "title": "LLM API key stolen from storage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "The LLM API key never expires on its own. If someone reads it from the vault, a config file or the logs, they can use the model and run up costs as if they were SecureNova.",
+                  "mitigation": "Keep the key in a proper secrets manager, give read access only to the agent, rotate it at least every 90 days, and alert on unusual use.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 28
+  }
+}

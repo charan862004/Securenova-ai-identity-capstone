@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="BRLt0wCsE7n_REDGC-SI">
+    <mxGraphModel dx="968" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;p&gt;IMPERSONATE THE AI AGENT TO GAIN ELEVATED API SCOPE&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="390" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Steal or Replay Agent Access Token&lt;br&gt;T7 | L3 × I4 = 12 (Medium)" vertex="1">
+          <mxGeometry height="60" width="150" x="120" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Compromise OAuth M2M Client Credentials&lt;br&gt;T6 | L3 × I4 = 12 (Medium)" vertex="1">
+          <mxGeometry height="60" width="150" x="420" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Exploit Weak Identity Validation&lt;br&gt;T3 | L3 × I5 = 15 (High)" vertex="1">
+          <mxGeometry height="60" width="130" x="690" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Obtain agent token from logs, memory or exposed configuration" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Steal OAuth client ID and client secret" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Exploit missing or weak token validation" vertex="1">
+          <mxGeometry height="60" width="120" x="700" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Use stolen credentials to request an access token" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;br&gt;Replay the stolen token before it expires" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Bypass issuer, audience or signature checks" vertex="1">
+          <mxGeometry height="60" width="120" x="700" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Attacker acts as the legitimate AI agent" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Attacker obtains a valid service access token" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;div&gt;Attacker is accepted as a trusted AI agent&lt;/div&gt;&lt;h2&gt;&lt;/h2&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="700" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-14" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="P4m24cZ28MvgBTg1BXYu-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="420" as="sourcePoint" />
+            <mxPoint x="680" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-15" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="478.12" y="170" as="sourcePoint" />
+            <mxPoint x="481.87" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-16" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="190" as="sourcePoint" />
+            <mxPoint x="210" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-17" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-2" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.402;exitY=1.005;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="210" y="350" as="sourcePoint" />
+            <mxPoint x="260" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-18" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-5" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="450" as="sourcePoint" />
+            <mxPoint x="300" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-19" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-9" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" target="P4m24cZ28MvgBTg1BXYu-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="150" y="570" as="sourcePoint" />
+            <mxPoint x="230" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-20" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-3" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.409;exitY=0.994;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-21" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-6" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="P4m24cZ28MvgBTg1BXYu-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="470" as="sourcePoint" />
+            <mxPoint x="360" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-22" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-8" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-12" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.2809" as="geometry">
+            <Array as="points" />
+            <mxPoint x="320" y="590" as="sourcePoint" />
+            <mxPoint x="370" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-23" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-4" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.451;entryY=0.07;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="320" as="sourcePoint" />
+            <mxPoint x="650" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-24" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-7" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="590" y="470" as="sourcePoint" />
+            <mxPoint x="640" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P4m24cZ28MvgBTg1BXYu-25" edge="1" parent="1" source="P4m24cZ28MvgBTg1BXYu-10" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="P4m24cZ28MvgBTg1BXYu-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="590" y="540" as="sourcePoint" />
+            <mxPoint x="640" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

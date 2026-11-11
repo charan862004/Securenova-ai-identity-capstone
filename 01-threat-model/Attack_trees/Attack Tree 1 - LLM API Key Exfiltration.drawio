@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="aTt8veCNG2huPxVRT2Rz">
+    <mxGraphModel dx="766" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gk88KaCf654OVc_S8l6J-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#36393d;" value="&lt;b&gt;STEAL THE LLM API KEY&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="320" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffff88;strokeColor=#36393d;" value=" Indirect Prompt Injection&lt;br&gt;T1 | L4 × I5 = 20 (High)" vertex="1">
+          <mxGeometry height="60" width="130" x="20" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffff88;strokeColor=#36393d;newEdgeStyle=%7B%22endArrow%22%3A%22none%22%2C%22html%22%3A%221%22%2C%22rounded%22%3A%220%22%2C%22defaultLabelBackgroundColor%22%3A%22page%22%2C%22curved%22%3A%220%22%2C%22edgeStyle%22%3A%22none%22%2C%22jettySize%22%3Anull%2C%22orthogonalLoop%22%3Anull%7D;" value="System Prompt Extraction&lt;br&gt;T9 | L4 × I3 = 12 (Medium)" vertex="1">
+          <mxGeometry height="60" width="150" x="315" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#ffff88;strokeColor=#36393d;" value="Direct Vault / Config Access&lt;br&gt;T5 | L3 × I5 = 15 (High)" vertex="1">
+          <mxGeometry height="60" width="140" x="600" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-5" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-2" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="gk88KaCf654OVc_S8l6J-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="240" as="sourcePoint" />
+            <mxPoint x="340" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-6" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-3" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;startArrow=classic;startFill=1;" target="gk88KaCf654OVc_S8l6J-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-7" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-4" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" target="gk88KaCf654OVc_S8l6J-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#cce5ff;strokeColor=#36393d;" value="Hidden malicious instructions in retrieved documents" vertex="1">
+          <mxGeometry height="60" width="130" x="20" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-9" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-8" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" target="gk88KaCf654OVc_S8l6J-2" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.3333" as="geometry">
+            <Array as="points" />
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Agent sends exposed API key to attacker" vertex="1">
+          <mxGeometry height="60" width="130" x="20" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-12" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-8" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gk88KaCf654OVc_S8l6J-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="520" as="sourcePoint" />
+            <mxPoint x="120" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#cce5ff;strokeColor=#36393d;" value="Trick agent into revealing hidden system instructions" vertex="1">
+          <mxGeometry height="60" width="150" x="315" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Agent response exposes API key or usable secret reference" vertex="1">
+          <mxGeometry height="60" width="150" x="315" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-16" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-13" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="gk88KaCf654OVc_S8l6J-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="530" as="sourcePoint" />
+            <mxPoint x="360" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-17" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-13" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="gk88KaCf654OVc_S8l6J-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#cce5ff;strokeColor=#36393d;" value="Exploit weak vault or configuration permissions" vertex="1">
+          <mxGeometry height="60" width="160" x="600" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#eeeeee;strokeColor=#36393d;" value="Attacker reads and exfiltrates the API key" vertex="1">
+          <mxGeometry height="60" width="160" x="600" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-20" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-18" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;startArrow=classic;startFill=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="370" as="sourcePoint" />
+            <mxPoint x="680" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gk88KaCf654OVc_S8l6J-21" edge="1" parent="1" source="gk88KaCf654OVc_S8l6J-18" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="gk88KaCf654OVc_S8l6J-19" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="510" as="sourcePoint" />
+            <mxPoint x="610" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
