@@ -1,0 +1,26 @@
+{"timestamp": 1794380000, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380002, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380004, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380006, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380008, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380010, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380012, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380014, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380016, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380018, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380020, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380022, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380024, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380026, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380028, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380030, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380032, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380034, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380036, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380038, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380040, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380042, "agent_id": "securenova-agent-001", "scope": "read:ai-data", "token_id": "tok-burst", "token_exp": 1794380300, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380120, "agent_id": "securenova-agent-002", "scope": "read:ai-data", "token_id": "tok-b", "token_exp": 1794380420, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380125, "agent_id": "securenova-agent-002", "scope": "read:ai-data write:admin", "token_id": "tok-b", "token_exp": 1794380420, "event": "api_call", "endpoint": "/api/admin"}
+{"timestamp": 1794380500, "agent_id": "securenova-agent-003", "scope": "read:ai-data", "token_id": "tok-expired", "token_exp": 1794380800, "event": "api_call", "endpoint": "/api/chat"}
+{"timestamp": 1794380860, "agent_id": "securenova-agent-003", "scope": "read:ai-data", "token_id": "tok-expired", "token_exp": 1794380800, "event": "api_call", "endpoint": "/api/chat"}
